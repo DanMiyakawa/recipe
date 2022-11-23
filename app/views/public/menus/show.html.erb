@@ -1,2 +1,8 @@
-<h1>Public::Menus#show</h1>
-<p>Find me in app/views/public/menus/show.html.erb</p>
+<h1>レシピの名前</h1>
+<h4><%= @menu.name %></h4>
+<h1>紹介文</h1>
+<h4><%= @menu.introduction %></h4>
+<%= link_to "編集する", edit_menu_path %>
+<%= link_to '削除する', menu_path(@menu), method: :delete, data: { confirm: '本当に消しますか？' } %>
+
+<%= link_to "一覧へ", menus_path %>
