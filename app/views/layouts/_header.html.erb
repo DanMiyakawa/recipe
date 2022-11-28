@@ -30,6 +30,11 @@
               メニュー一覧
               <% end %>
             </li>
+            <li class="text-center">
+              <%= link_to users_path, class: 'nav-link text-dark'  do %>
+              ユーザー一覧
+              <% end %>
+            </li>
 	          <li class="text-center">
               <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-dark'  do %>
                 ログアウト
