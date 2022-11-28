@@ -1,0 +1,19 @@
+<%= form_with model: @user, local: true do |f| %>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 mb-4">
+      <!--レシピ-->
+      <div class="form">
+        <div class="form-group">
+          <div class="form-title">
+            <h4>メールアドレス</h4>
+          </div>
+          <%= f.text_field :email, class: "email-form" %>
+        </div>
+      </div>
+    </div>
+
+<div class="form-btn">
+          <%= f.submit '投稿', class:"btn btn-success" %>
+        </div>
+  </div>
+<% end %>
