@@ -13,6 +13,9 @@ import "popper.js";
 import "bootstrap";
 import "../stylesheets/application" 
 import '@fortawesome/fontawesome-free/js/all'
+require('jquery') //jQeryに依存しているため、ないと動かないです
+import "cocoon"   //cocoonを動かすための記述
+
 
 Rails.start()
 Turbolinks.start()

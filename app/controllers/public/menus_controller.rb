@@ -2,6 +2,10 @@ class Public::MenusController < ApplicationController
 
   def new
     @menu = Menu.new
+   @menu.ingredients.build
+    2.times {
+    @menu.steps.build
+    }
   end
 
   def create
@@ -27,7 +31,7 @@ class Public::MenusController < ApplicationController
     @menu.update(menu_params)
     redirect_to menu_path(@menu)
   end
-  
+
   def destroy
     @menu = Menu.find(params[:id])
     @menu.destroy
