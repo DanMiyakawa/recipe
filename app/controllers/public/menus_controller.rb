@@ -10,8 +10,11 @@ class Public::MenusController < ApplicationController
 
   def create
     @menu = Menu.new(menu_params)
-    @menu.save
-    redirect_to menu_path(@menu.id)
+    if @menu.save
+      redirect_to menu_path(@menu.id)
+    else
+      render 'new'
+    end
   end
 
   def index
@@ -42,8 +45,8 @@ class Public::MenusController < ApplicationController
 
   def menu_params
     params.require(:menu).permit(:user_id, :name, :introduction, :genre_id, :menu_image, :status,
-    ingredients_attributes:[:id, :name, :amount, :_destroy],
-    steps_attributes:[:id, :number, :explanation, :_destroy])
+    ingredients_attributes:[:id, :menu_id, :name, :amount, :_destroy],
+    steps_attributes:[:id, :menu_id, :number, :explanation, :_destroy])
   end
 
 end
