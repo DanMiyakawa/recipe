@@ -6,7 +6,6 @@
         <div class="form-group">
           <div class="form-title">
             <h4>レシピ名</h4>
-            <div class="font-count">　※30字以内</div>
           </div>
           <%= f.text_field :name, placeholder: "例:test", class: "recipe-name-form" %>
         </div>
@@ -34,7 +33,6 @@
       </div><br>
       <div class="form-title">
           <h4>作り方</h4>
-          <div class="font-count">　※100字以内</div>
         </div>
         <div class="field">
           <%= f.fields_for :steps do |step| %>
